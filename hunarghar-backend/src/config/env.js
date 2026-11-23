@@ -4,7 +4,7 @@ require('dotenv').config();
 const env = {
   NODE_ENV: process.env.NODE_ENV || 'development',
   PORT: Number(process.env.PORT) || 5000,
-  PUBLIC_URL: process.env.PUBLIC_URL || `http://localhost:${PORT: Number(process.env.PORT) || 3000,}`,
+  PUBLIC_URL: process.env.PUBLIC_URL || `http://localhost:${process.env.PORT || 5000}`,
   CLIENT_URLS: (process.env.CLIENT_URL || 'http://localhost:3000').split(',').map((s) => s.trim()),
   DATABASE_URL: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/hunarghar',
   DB_SSL: String(process.env.DB_SSL).toLowerCase() === 'true',
@@ -30,3 +30,4 @@ if (!env.JWT_SECRET || env.JWT_SECRET.length < 16) {
 }
 
 module.exports = env;
+
