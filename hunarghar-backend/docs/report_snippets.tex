@@ -1,0 +1,37 @@
+% Paste into your LaTeX SRS/report (needs \usepackage{longtable,booktabs,graphicx}).
+\section{Backend Implementation and Traceability}
+The backend is implemented with Node.js and Express and uses PostgreSQL for persistence. Authentication uses
+JSON Web Tokens; passwords are stored only as bcrypt hashes (SFR-03). Real-time chat uses Socket.io, portfolio images
+are stored on Cloudinary and the AI chatbot is a locally trained Multinomial Naive Bayes classifier.
+
+\subsection{Database Design}
+\begin{figure}[h]\centering
+  \includegraphics[width=\textwidth]{er-diagram.png}  % export from docs/DIAGRAMS.md (diagram 1)
+  \caption{Entity-relationship diagram of HunarGhar}
+\end{figure}
+
+\subsection{Chatbot Training Results}
+\begin{table}[h]\centering
+\begin{tabular}{ll}\toprule
+Algorithm & Multinomial Naive Bayes (unigram + bigram), Laplace $\alpha=0.2$\\
+Intents & 35 (project FAQ, small talk, five service categories)\\
+Training phrases & 402\\
+Held-out test accuracy & 97.2\% (69 of 71 unseen questions)\\
+Unknown questions & answered with a fallback message and manual-search link (FR-41)\\ \bottomrule
+\end{tabular}\caption{Chatbot evaluation (output of \texttt{npm run train:chatbot})}
+\end{table}
+
+\subsection{Requirement Traceability}
+\begin{longtable}{p{3.2cm}p{5cm}p{5cm}}\toprule
+\textbf{SRS ID} & \textbf{Endpoint / mechanism} & \textbf{Source file}\\\midrule\endhead
+SFR-01 to SFR-03 & POST /api/auth/register & routes/auth.js\\
+SFR-04, SFR-05   & POST /api/auth/login, /logout & routes/auth.js\\
+SFR-14           & GET /api/providers (filters) & services/providerSearch.js\\
+SFR-18 to SFR-24 & /api/bookings (state transitions) & routes/bookings.js\\
+SFR-25 to SFR-28 & Socket.io + /api/bookings/:id/messages & sockets/chat.js\\
+SFR-29 to SFR-32 & /api/payments (simulated) & routes/payments.js\\
+SFR-33 to SFR-37 & /api/reviews, /api/reports & routes/reviews.js\\
+SFR-38 to SFR-43 & /api/verification, /api/reports & routes/verification.js\\
+SFR-44 to SFR-48 & POST /api/chatbot/message & src/chatbot/\\ \bottomrule
+\end{longtable}
+% Full table: docs/TRACEABILITY.md

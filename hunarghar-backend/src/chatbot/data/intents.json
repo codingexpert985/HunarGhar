@@ -1,0 +1,723 @@
+{
+ "intents": [
+  {
+   "tag": "greeting",
+   "type": "smalltalk",
+   "patterns": [
+    "hello",
+    "hi",
+    "hey there",
+    "good morning",
+    "good evening",
+    "salam",
+    "assalam o alaikum",
+    "aoa",
+    "hi there",
+    "hello bot",
+    "hey",
+    "hello hi hey salam aoa greetings morning evening"
+   ],
+   "responses": [
+    "Hello! 👋 I'm the HunarGhar assistant. Ask me about the platform, or tell me what service you need (e.g. \"I need a tailor in Karachi\")."
+   ]
+  },
+  {
+   "tag": "thanks",
+   "type": "smalltalk",
+   "patterns": [
+    "thanks",
+    "thank you",
+    "thank you so much",
+    "shukriya",
+    "jazakallah",
+    "that was helpful",
+    "great thanks",
+    "thanks a lot",
+    "thanks thank shukriya jazakallah appreciated grateful"
+   ],
+   "responses": [
+    "You're welcome! Let me know if you need anything else about HunarGhar."
+   ]
+  },
+  {
+   "tag": "goodbye",
+   "type": "smalltalk",
+   "patterns": [
+    "bye",
+    "goodbye",
+    "see you later",
+    "allah hafiz",
+    "khuda hafiz",
+    "ok bye",
+    "talk to you later",
+    "bye goodbye hafiz farewell later"
+   ],
+   "responses": [
+    "Goodbye! Come back any time."
+   ]
+  },
+  {
+   "tag": "bot_identity",
+   "type": "smalltalk",
+   "patterns": [
+    "who are you",
+    "what are you",
+    "are you a bot",
+    "what can you do",
+    "what is your name",
+    "help me",
+    "how can you help me",
+    "what can i ask you",
+    "bot chatbot assistant name capabilities help",
+    "robot human real person ai assistant"
+   ],
+   "responses": [
+    "I'm the HunarGhar assistant chatbot. I can (1) answer questions about the HunarGhar platform and (2) suggest service categories and providers from a plain-language description of what you need. My suggestions are not a guarantee of quality, availability or safety."
+   ]
+  },
+  {
+   "tag": "about_project",
+   "type": "faq",
+   "patterns": [
+    "what is hunarghar",
+    "tell me about hunarghar",
+    "what does hunarghar do",
+    "explain the project",
+    "what is this platform",
+    "project overview",
+    "what is the purpose of hunarghar",
+    "describe hunarghar platform",
+    "hunarghar kya hai",
+    "hunarghar overview platform about project purpose idea summary introduction",
+    "what is hunarghar all about",
+    "explain hunarghar"
+   ],
+   "responses": [
+    "HunarGhar is a web platform that connects customers with women who offer home-based services in Pakistan, such as tailoring, cooking, tutoring, beauty services and handicrafts. It supports verified provider profiles, search and filtering, booking requests, real-time chat, a simulated cashless payment, ratings and reviews, admin verification, and an AI-assisted chatbot."
+   ]
+  },
+  {
+   "tag": "problem_statement",
+   "type": "faq",
+   "patterns": [
+    "what problem does hunarghar solve",
+    "why was hunarghar created",
+    "problem statement",
+    "why do we need this platform",
+    "what is the motivation",
+    "what gap does this project fill",
+    "why this project",
+    "problem statement motivation gap solve reason created need word of mouth",
+    "why did you build this",
+    "what issue does it address"
+   ],
+   "responses": [
+    "Many women in Pakistan run home-based businesses but can only reach customers through word of mouth or scattered social media posts. Customers have no trusted place to discover nearby providers, compare prices, verify credibility and book with confidence. HunarGhar provides one unified, trusted platform for discovery, booking, payment simulation and reviews."
+   ]
+  },
+  {
+   "tag": "objectives",
+   "type": "faq",
+   "patterns": [
+    "what are the objectives",
+    "project objectives",
+    "goals of the project",
+    "what are the aims",
+    "main goals of hunarghar",
+    "list the objectives",
+    "objectives aims goals targets purpose list"
+   ],
+   "responses": [
+    "Objectives: (1) verified provider profiles with skills, portfolio, pricing and availability; (2) customer search and filters by category, location, price and rating; (3) an in-app booking request/accept flow with real-time chat; (4) a simulated secure cashless payment; (5) an AI chatbot for service matching; (6) ratings, reviews and admin verification to build trust and safety."
+   ]
+  },
+  {
+   "tag": "users_roles",
+   "type": "faq",
+   "patterns": [
+    "who can use the system",
+    "what are the user roles",
+    "types of users",
+    "who are the actors",
+    "what roles exist",
+    "explain stakeholders",
+    "who are the stakeholders",
+    "user types in hunarghar",
+    "users roles actors stakeholders customer provider administrator visitor",
+    "who uses hunarghar",
+    "different kinds of accounts"
+   ],
+   "responses": [
+    "There are four kinds of users: Customer (searches, books, chats, pays, reviews), Service Provider (manages profile and services, answers bookings, chats), Administrator (verifies providers, handles reports) and Visitor (can browse public listings but must sign in to book, message or review)."
+   ]
+  },
+  {
+   "tag": "service_categories",
+   "type": "faq",
+   "patterns": [
+    "what services are available",
+    "which categories exist",
+    "what kind of services can providers offer",
+    "list of service categories",
+    "what categories do you have",
+    "available service types",
+    "what can i book on hunarghar",
+    "categories category types services offered tailoring cooking tutoring beauty handicrafts",
+    "what categories are supported",
+    "which kinds of work can women list"
+   ],
+   "responses": [
+    "Current categories are Tailoring, Cooking, Tutoring, Beauty and Handicrafts. New categories can be added without redesigning the system."
+   ]
+  },
+  {
+   "tag": "register",
+   "type": "faq",
+   "patterns": [
+    "how do i register",
+    "how to create an account",
+    "how to sign up",
+    "registration process",
+    "how can i make an account",
+    "sign up steps",
+    "account banane ka tarika",
+    "how do i join as provider",
+    "register registration signup sign account create join new account",
+    "how can a new user join",
+    "create profile account email password"
+   ],
+   "responses": [
+    "Open the registration page and enter your full name, email, password and account type (customer or provider). The email must be valid and unused, and the password must meet the minimum length. After registering you can sign in with your email and password."
+   ]
+  },
+  {
+   "tag": "login",
+   "type": "faq",
+   "patterns": [
+    "how do i login",
+    "how to sign in",
+    "i cannot log in",
+    "login problem",
+    "how to sign out",
+    "logout",
+    "forgot how to login",
+    "authentication method",
+    "login signin sign logout password session access account",
+    "unable to sign in",
+    "how do i get into my account"
+   ],
+   "responses": [
+    "Sign in with your email and password. On success you are taken to the dashboard for your role. If sign-in fails you will see a general 'invalid email or password' message. You can sign out at any time, after which protected pages are inaccessible until you sign in again."
+   ]
+  },
+  {
+   "tag": "provider_profile",
+   "type": "faq",
+   "patterns": [
+    "how does a provider create a profile",
+    "how to list my services",
+    "how do i add a service",
+    "how can i set my price",
+    "how to upload portfolio images",
+    "provider dashboard features",
+    "how do i edit my profile",
+    "what can a provider do",
+    "provider profile bio skills listing portfolio upload images edit services price availability dashboard",
+    "how do women add their work",
+    "what can a woman provider manage"
+   ],
+   "responses": [
+    "A provider can create and edit her profile (bio, skills, city/area), add, edit or remove service listings (category, description, price, availability), upload portfolio images, submit her profile for verification, and accept or reject booking requests from her dashboard."
+   ]
+  },
+  {
+   "tag": "search_filters",
+   "type": "faq",
+   "patterns": [
+    "how do i search for a provider",
+    "what filters are available",
+    "can i filter by price",
+    "filter by rating",
+    "find providers by location",
+    "how to sort results",
+    "search and filter options",
+    "how does search work",
+    "search filter filters sort browse find location price rating category results",
+    "how do customers look for providers",
+    "narrow down providers"
+   ],
+   "responses": [
+    "Anyone can browse providers without signing in. Customers can filter by service category, location (city/area), price range and minimum rating, and sort by rating or price. When several filters are selected only providers matching all of them are shown. If nothing matches you can clear the filters or use the AI chatbot."
+   ]
+  },
+  {
+   "tag": "booking",
+   "type": "faq",
+   "patterns": [
+    "how do i book a service",
+    "how to make a booking",
+    "booking process",
+    "how does booking work",
+    "how to request a booking",
+    "what happens after i book",
+    "booking request flow",
+    "how do i schedule a service",
+    "book booking request schedule appointment date time notes reserve",
+    "how do i reserve a provider",
+    "steps to place an order"
+   ],
+   "responses": [
+    "A signed-in customer picks a service, enters the requested date/time (it cannot be in the past) and optional notes. The booking is saved as pending. The provider can accept or reject it. Both sides can see the current status (pending, accepted, rejected, cancelled or completed)."
+   ]
+  },
+  {
+   "tag": "booking_status",
+   "type": "faq",
+   "patterns": [
+    "what are the booking statuses",
+    "booking states",
+    "what does pending mean",
+    "can i cancel a booking",
+    "how to cancel",
+    "how is a booking completed",
+    "booking lifecycle",
+    "can provider reject booking",
+    "status pending accepted rejected cancelled completed cancel lifecycle state",
+    "how to cancel an order",
+    "what does accepted mean"
+   ],
+   "responses": [
+    "Booking statuses: pending, accepted, rejected, cancelled, completed. Only the provider can accept or reject, and only while pending. A booking can be cancelled by the customer or provider before completion; a completed booking cannot be cancelled. An accepted booking can be marked completed, after which a review can be written."
+   ]
+  },
+  {
+   "tag": "chat",
+   "type": "faq",
+   "patterns": [
+    "how does chat work",
+    "can i message the provider",
+    "real time chat",
+    "how do i talk to a provider",
+    "messaging feature",
+    "who can see my messages",
+    "is chat private",
+    "socket io chat",
+    "chat message messages messaging talk conversation socket realtime communicate",
+    "how do customer and provider talk",
+    "is there live messaging"
+   ],
+   "responses": [
+    "Each booking has one conversation that only the customer and provider of that booking can open (administrators can read it only for moderation of a reported message). Messages are saved with sender and time, shown in order and delivered instantly using Socket.io. If the connection drops a status message is shown and the app tries to reconnect."
+   ]
+  },
+  {
+   "tag": "payment",
+   "type": "faq",
+   "patterns": [
+    "how does payment work",
+    "can i pay online",
+    "is payment real",
+    "is it real money",
+    "jazzcash easypaisa",
+    "how to pay for a booking",
+    "simulated payment",
+    "cashless payment",
+    "mock payment",
+    "payment pay paid money simulated mock demo cashless jazzcash easypaisa transaction wallet",
+    "how do i pay",
+    "is real money transferred"
+   ],
+   "responses": [
+    "Payment in the project demo is simulated. The payment page shows the service, provider and amount with a clear 'demonstration' notice. When the customer presses confirm, a mock_paid status is saved against the booking. No real money moves and no real payment gateway is connected. Real JazzCash/Easypaisa integration is a future enhancement."
+   ]
+  },
+  {
+   "tag": "reviews",
+   "type": "faq",
+   "patterns": [
+    "how do i leave a review",
+    "how do ratings work",
+    "can i rate a provider",
+    "review rules",
+    "who can write a review",
+    "can i review twice",
+    "how is average rating calculated",
+    "feedback for provider",
+    "review reviews rating ratings stars rate feedback comment average",
+    "how do customers rate",
+    "one review per booking"
+   ],
+   "responses": [
+    "After a booking is completed the customer can give a rating from 1 to 5 and write a comment. Only one review per booking is allowed. Published reviews and the average rating appear on the provider's profile, and the average updates whenever a new review is published."
+   ]
+  },
+  {
+   "tag": "verification",
+   "type": "faq",
+   "patterns": [
+    "how does verification work",
+    "what is a verified provider",
+    "how to get verified",
+    "provider verification process",
+    "admin approve provider",
+    "verification status",
+    "what does verified badge mean",
+    "how do admins verify providers",
+    "verification verify verified unverified badge approve reject trust identity",
+    "how are providers checked",
+    "what is the verified tick"
+   ],
+   "responses": [
+    "A provider submits her profile for verification, which creates a pending request. An administrator reviews pending requests and approves or rejects them; the decision, the admin and the time are saved. The status (unverified, pending, verified, rejected) is shown on the profile and in search results. Verification supports trust but cannot guarantee a person's conduct or service quality."
+   ]
+  },
+  {
+   "tag": "admin",
+   "type": "faq",
+   "patterns": [
+    "what can the admin do",
+    "administrator functions",
+    "admin dashboard",
+    "how are reports handled",
+    "how to report a profile",
+    "report inappropriate content",
+    "moderation",
+    "how to report a user",
+    "admin administrator moderation report reports resolve hide remove inappropriate abuse suspicious",
+    "how do i flag a bad profile",
+    "what do admins manage"
+   ],
+   "responses": [
+    "Administrators review pending verification requests, approve or reject them, and handle reports. Any signed-in user can report a profile, review or message with a reason; reports start as open and an admin can resolve them and hide or remove inappropriate content. Admin functions are checked on the server for every request."
+   ]
+  },
+  {
+   "tag": "chatbot_feature",
+   "type": "faq",
+   "patterns": [
+    "how does the chatbot work",
+    "what is the ai chatbot",
+    "can the chatbot recommend providers",
+    "ai service matching",
+    "how does ai matching work",
+    "does the chatbot guarantee quality",
+    "is the chatbot accurate",
+    "chatbot ai assistant recommendation matching natural language suggestion model",
+    "how does the ai suggest providers",
+    "is the bot reliable"
+   ],
+   "responses": [
+    "The chatbot lets you describe what you need in ordinary language and suggests matching categories or providers. It is a trained text-classification model running on our own server, so your text is not sent to an external service, and personal details such as emails and phone numbers are removed first. If it is not confident it says so and points you to manual search. Its suggestions are not a guarantee of quality, availability or safety."
+   ]
+  },
+  {
+   "tag": "map",
+   "type": "faq",
+   "patterns": [
+    "is there a map",
+    "how does the map work",
+    "openstreetmap",
+    "leaflet",
+    "can i see provider location",
+    "location privacy",
+    "does it show exact address",
+    "map maps leaflet openstreetmap location marker address city area",
+    "where is the provider located",
+    "can customers see locations on a map"
+   ],
+   "responses": [
+    "Provider locations are shown on a map built with OpenStreetMap and Leaflet.js. Only the approximate city or area is shown, never a street address or exact coordinates, to protect privacy."
+   ]
+  },
+  {
+   "tag": "security",
+   "type": "faq",
+   "patterns": [
+    "how is my data protected",
+    "is it secure",
+    "password security",
+    "are passwords stored safely",
+    "what security features",
+    "role based access",
+    "jwt token",
+    "is my data safe",
+    "security secure bcrypt hash jwt token authentication authorization encryption https protect safe",
+    "how are passwords protected",
+    "is the app secure"
+   ],
+   "responses": [
+    "Passwords are stored only as hashes (bcrypt). Authentication uses JWT tokens, and every protected request is checked on the server for role and ownership. Input is validated, secrets are kept in environment variables, and HTTPS is used in deployment. Users can only access bookings and conversations they are authorised for."
+   ]
+  },
+  {
+   "tag": "privacy",
+   "type": "faq",
+   "patterns": [
+    "what data do you collect",
+    "privacy policy",
+    "do you share my information",
+    "personal information",
+    "is my location shared",
+    "data collection",
+    "privacy of users",
+    "privacy personal information data collection share location confidential",
+    "what information do you keep",
+    "do you sell my data"
+   ],
+   "responses": [
+    "HunarGhar collects only what is needed: name, email, role, profile and booking details, messages and uploaded images. Exact locations are not displayed and access to personal data is restricted by role. Requests to the chatbot have personal details removed."
+   ]
+  },
+  {
+   "tag": "tech_stack",
+   "type": "faq",
+   "patterns": [
+    "what technologies are used",
+    "tech stack",
+    "which database is used",
+    "what is the backend built with",
+    "frontend framework",
+    "which programming language",
+    "which technologies does hunarghar use",
+    "what is used for image storage",
+    "hosting platform",
+    "technology technologies stack react next node express postgresql postgres mongodb firebase socketio cloudinary tailwind vercel render supabase framework language",
+    "what is it built with",
+    "which tools were used for development"
+   ],
+   "responses": [
+    "Frontend: React.js/Next.js with Tailwind CSS. Backend: Node.js with Express. Database: PostgreSQL. Authentication: JWT. Real-time chat: Socket.io. Maps: OpenStreetMap with Leaflet.js. Image storage: Cloudinary. Chatbot: a locally trained Naive Bayes intent classifier. Hosting: Vercel (frontend), Render/Railway (backend), Supabase (database) on free tiers."
+   ]
+  },
+  {
+   "tag": "database_design",
+   "type": "faq",
+   "patterns": [
+    "database design",
+    "what tables are there",
+    "what entities are in the database",
+    "explain the schema",
+    "data dictionary",
+    "erd",
+    "how is data stored",
+    "list the tables",
+    "database schema tables entity erd relations postgres sql columns data dictionary",
+    "how many tables",
+    "what is stored in the database"
+   ],
+   "responses": [
+    "The PostgreSQL schema has these tables: users, provider_profiles, services, portfolio_images, bookings, messages, payments, reviews, verification_requests and reports. Bookings link customers, providers and services; messages, payments and reviews link to a booking; reviews are unique per booking."
+   ]
+  },
+  {
+   "tag": "non_functional",
+   "type": "faq",
+   "patterns": [
+    "performance requirements",
+    "how fast is the system",
+    "non functional requirements",
+    "quality attributes",
+    "how fast should the page load",
+    "usability requirements",
+    "availability requirement",
+    "performance speed seconds load nonfunctional quality attributes reliability usability maintainability availability",
+    "how quick is the site",
+    "non-functional requirements list"
+   ],
+   "responses": [
+    "Targets: the main page should load within 4 seconds and common search/profile requests should return within 3 seconds under normal demo conditions. Other quality goals include security, correctness (invalid status transitions are rejected), reliability, maintainability, portability, usability on desktop and mobile, and privacy."
+   ]
+  },
+  {
+   "tag": "future",
+   "type": "faq",
+   "patterns": [
+    "future enhancements",
+    "what features will be added later",
+    "future work",
+    "can it be extended",
+    "mobile app plans",
+    "urdu support",
+    "notifications",
+    "real payment integration plan",
+    "future enhancements later upcoming roadmap extend improve mobile pwa urdu notifications",
+    "what will you add next",
+    "planned improvements"
+   ],
+   "responses": [
+    "Planned future enhancements: real payment gateway integration (JazzCash/Easypaisa), stronger provider verification, a mobile app/PWA, smarter AI recommendations, notifications and reminders, advanced search and distance filters, provider analytics, and accessibility and Urdu localisation."
+   ]
+  },
+  {
+   "tag": "team",
+   "type": "faq",
+   "patterns": [
+    "who made this project",
+    "who are the team members",
+    "project team",
+    "who is the supervisor",
+    "which university",
+    "who developed hunarghar",
+    "submitted to whom",
+    "group members",
+    "team members developers students supervisor teacher miss fakhra university ned group roll novaira rubab mishael urooj",
+    "who built hunarghar",
+    "who is the course instructor"
+   ],
+   "responses": [
+    "HunarGhar was built by Novaira Faisal (CS-060), Rubab Bano (CS-062), Mishael Baig (CS-064) and Urooj Nasir (CS-065), Department of Computer and Information Systems, NED University of Engineering and Technology, practical group G2, submitted to Miss Fakhra Aftab."
+   ]
+  },
+  {
+   "tag": "srs",
+   "type": "faq",
+   "patterns": [
+    "what is srs",
+    "what is in the srs document",
+    "functional requirements",
+    "how many requirements",
+    "explain the srs",
+    "requirement ids",
+    "what are system functional requirements",
+    "srs software requirements specification fr sfr requirement requirements ieee document use case",
+    "how many functional requirements are there",
+    "what does the srs contain"
+   ],
+   "responses": [
+    "The SRS (version 1.0, 18 October 2026) defines the scope, users, constraints, 46 functional requirements (FR-01 to FR-46), 51 system functional requirements (SFR-01 to SFR-51), use cases, non-functional requirements, future enhancements and a data dictionary for HunarGhar."
+   ]
+  },
+  {
+   "tag": "service_tailoring",
+   "type": "service",
+   "category": "Tailoring",
+   "patterns": [
+    "i need a tailor",
+    "stitch my dress",
+    "sew a suit",
+    "alteration of clothes",
+    "stitching of shalwar kameez",
+    "bridal dress stitching",
+    "fix my clothes",
+    "need clothes stitched",
+    "silai karwani hai",
+    "darzi chahiye",
+    "boutique stitching",
+    "blouse stitching",
+    "kurta alteration",
+    "embroidery on my dress",
+    "need a seamstress",
+    "tailor tailoring stitch stitching sew sewing dress suit alteration darzi silai boutique kurta shalwar blouse embroidery seamstress clothes fabric",
+    "need something stitched"
+   ]
+  },
+  {
+   "tag": "service_cooking",
+   "type": "service",
+   "category": "Cooking",
+   "patterns": [
+    "i need a home cook",
+    "order homemade food",
+    "catering for a party",
+    "biryani for a dinner",
+    "home cooked meals",
+    "bake a cake",
+    "need food for an event",
+    "khana chahiye",
+    "desi food delivery",
+    "birthday cake order",
+    "meal prep for the week",
+    "tiffin service",
+    "frozen food paratha samosa",
+    "dawat catering",
+    "homemade pickles and chutney",
+    "cook cooking food meal biryani cake bake baking catering dinner lunch khana homemade dawat tiffin recipe",
+    "need homemade food made for me"
+   ]
+  },
+  {
+   "tag": "service_tutoring",
+   "type": "service",
+   "category": "Tutoring",
+   "patterns": [
+    "i need a tutor",
+    "home tuition for my child",
+    "teach maths",
+    "quran teacher for kids",
+    "english lessons",
+    "help with homework",
+    "need a teacher for o levels",
+    "tuition chahiye",
+    "parhai ke liye teacher",
+    "science tutor for class 8",
+    "learn urdu reading",
+    "coaching for matric exams",
+    "teach my daughter to read",
+    "need online classes",
+    "chemistry tutor",
+    "tutor tutoring teacher tuition teach lessons homework quran class exam maths science english urdu coaching parhai",
+    "someone to teach my child"
+   ]
+  },
+  {
+   "tag": "service_beauty",
+   "type": "service",
+   "category": "Beauty",
+   "patterns": [
+    "i need a beautician",
+    "bridal makeup",
+    "mehndi for wedding",
+    "facial and haircut",
+    "hair styling at home",
+    "parlour services",
+    "henna design",
+    "makeup artist for party",
+    "waxing and threading",
+    "salon at home",
+    "beauty services",
+    "mehndi lagwani hai",
+    "parlor ghar par",
+    "manicure and pedicure",
+    "skin care facial",
+    "beauty beautician makeup mehndi henna facial hair salon parlour parlor bridal manicure pedicure waxing skincare",
+    "need to get ready for an event"
+   ]
+  },
+  {
+   "tag": "service_handicrafts",
+   "type": "service",
+   "category": "Handicrafts",
+   "patterns": [
+    "i want handmade items",
+    "crochet bag",
+    "embroidered cushion covers",
+    "handmade gifts",
+    "knitting a sweater",
+    "pottery and decor",
+    "handmade jewelry",
+    "macrame wall hanging",
+    "custom made craft",
+    "hand embroidered shawl",
+    "crafts for wedding favors",
+    "ralli quilt",
+    "handmade candles",
+    "painting and calligraphy art",
+    "handmade dolls",
+    "handmade handicraft handicrafts craft crochet knit knitting pottery jewelry jewellery macrame embroidery painting candles gift decor art",
+    "custom handmade gift item"
+   ]
+  }
+ ],
+ "cities": [
+  "Karachi",
+  "Lahore",
+  "Islamabad",
+  "Rawalpindi",
+  "Faisalabad",
+  "Peshawar",
+  "Quetta",
+  "Multan",
+  "Hyderabad",
+  "Sialkot"
+ ]
+}

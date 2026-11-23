@@ -1,0 +1,39 @@
+{
+  "name": "hunarghar-backend",
+  "version": "1.0.0",
+  "description": "HunarGhar - Home-Based Women's Services Platform: REST API, Socket.io chat, PostgreSQL database and trained chatbot",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:init": "node scripts/initDb.js",
+    "db:reset": "node scripts/initDb.js --reset",
+    "db:seed": "node scripts/seed.js",
+    "train:chatbot": "node src/chatbot/train.js",
+    "setup": "npm run db:init && npm run db:seed && npm run train:chatbot",
+    "test": "node --test tests/chatbot.test.js"
+  },
+  "dependencies": {
+    "@supabase/server": "^1.9.2",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.2",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

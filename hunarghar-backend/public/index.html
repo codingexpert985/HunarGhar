@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HunarGhar API demo</title>
+<style>
+  :root { --bg:#faf7f5; --card:#fff; --ink:#2b2b2b; --muted:#6b6b6b; --brand:#a23b72; --line:#e6dfe3; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#17131a; --card:#221c26; --ink:#f2ecf4; --muted:#a79dac; --brand:#e07bb3; --line:#3a3040; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header { padding:20px 24px; border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:20px; color:var(--brand); }
+  header p { margin:4px 0 0; color:var(--muted); font-size:14px; }
+  main { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); padding:20px 24px; max-width:1100px; margin:auto; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; }
+  h2 { margin:0 0 10px; font-size:16px; }
+  .log { height:280px; overflow:auto; border:1px solid var(--line); border-radius:8px; padding:8px; font-size:14px; background:var(--bg); }
+  .msg { margin:6px 0; padding:6px 10px; border-radius:10px; max-width:90%; white-space:pre-wrap; }
+  .me { background:var(--brand); color:#fff; margin-left:auto; }
+  .them { background:var(--card); border:1px solid var(--line); }
+  .row { display:flex; gap:8px; margin-top:8px; }
+  input, select, button { font:inherit; padding:8px 10px; border-radius:8px; border:1px solid var(--line); background:var(--card); color:var(--ink); }
+  input { flex:1; min-width:0; }
+  button { background:var(--brand); color:#fff; border:0; cursor:pointer; }
+  small { color:var(--muted); display:block; margin-top:6px; }
+  a { color:var(--brand); }
+</style>
+</head>
+<body>
+<header>
+  <h1>HunarGhar — backend demo</h1>
+  <p>Test the trained chatbot and the Socket.io live chat without a frontend. API health: <a href="/api/health">/api/health</a></p>
+</header>
+<main>
+  <section>
+    <h2>AI chatbot</h2>
+    <div id="botLog" class="log"></div>
+    <div class="row"><input id="botInput" placeholder='Try: "I need a tailor in Karachi under 9000"'><button id="botSend">Send</button></div>
+    <small>Ask about the project ("how does payment work?") or describe a service.</small>
+  </section>
+  <section>
+    <h2>Sign in &amp; live chat</h2>
+    <div class="row"><input id="email" placeholder="email" value="sara@example.com"><input id="password" type="password" placeholder="password" value="Password@123"></div>
+    <div class="row"><button id="loginBtn">Sign in</button><select id="bookingSel"><option value="">— my bookings —</option></select></div>
+    <div id="status"><small>Not signed in.</small></div>
+    <div id="chatLog" class="log" style="margin-top:8px"></div>
+    <div class="row"><input id="chatInput" placeholder="Type a message (open two browsers: customer + provider)"><button id="chatSend">Send</button></div>
+    <small>Seed logins: sara@example.com (customer), fatima@example.com (provider) — password Password@123. The chat is on the booking "Mehndi" (accepted).</small>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/demo.js"></script>
+</body>
+</html>
